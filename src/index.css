@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Wipe out Vite's default layout jail cells */
+:root {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none !important; /* Force breaks out of the 1280px limit */
+}

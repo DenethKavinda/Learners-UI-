@@ -1,0 +1,623 @@
+
+
+{
+  "nav": {
+    "home": { "en": "Home", "si": "ප්‍රධාන පිටුව" },
+    "packages": { "en": "Our Packages", "si": "පැකේජයන්" },
+    "gallery": { "en": "Gallery", "si": "ඡායාරූප එකතුව" },
+    "about": { "en": "About Us", "si": "අප ගැන" },
+    "contact": { "en": "Contact Us", "si": "සම්බන්ධ වීමට" }
+  },
+
+  
+  "home": {
+    "hero_badge" : {
+        "en" : "⚡ Safety and Defensive Driving Training",
+        "si" : "⚡ ආරක්ෂිත සහ ආරක්ෂක රියදුරු පුහුණු කිරීම"
+    },
+    "hero_title_part1" : {
+        "en" : "Drive Smart.",
+        "si" : "බුද්ධිමත්ව රිය පදවන්න."
+    },
+    "hero_title_part2" : {
+        "en" : "Drive Confidently.",
+        "si" : "විශ්වාසයෙන් ඉදිරියට යන්න."
+    },
+    "hero_desc" : {
+        "en" : "Skip the exam stress. Our tailored instructional road mapping sets beginners up for seamless licensing and lifetime safety execution.",
+        "si" : "විභාග බය අමතක කරන්න. අපගේ ක්‍රමවත් පුහුණුව සමඟ බලපත්‍රය පහසුවෙන් ලබාගෙන ආරක්ෂිත රියදුරෙකු වන්න."
+    },
+    "btn_book" : {
+        "en" : "Booking Your Package",
+        "si" : "ඔබේ පැකේජය වෙන්කරන්න"
+    },
+    "btn_exam" : {
+        "en" : "Practice Exam",
+        "si" : "අභ්‍යාස විභාගය"
+    },
+    "btn_feedback" : {
+        "en" : "Share Feedback",
+        "si" : "ඔබේ අදහස බෙදාගන්න"
+    },
+    "video_badge" : {
+        "en" : "Watch Our Video",
+        "si" : "අපගේ වීඩියෝව බලන්න"
+    },
+    "metric_pass" : {
+        "en" : "Pass Rate",
+        "si" : "සමත් වීමේ ප්‍රතිශතය"
+    },
+    "metric_students" : {
+        "en" : "Students",
+        "si" : "පුහුණු කරන ලද සිසුන්"
+    },
+    "metric_coaches" : {
+        "en" : "Instructors",
+        "si" : "පුහුණුකරුවන්"
+    },
+    "video_status" : {
+        "en" : "Reservations Open For This Week",
+        "si" : "මෙම සතිය සඳහා වෙන්කිරීම් විවෘතයි"
+    },
+    "video_action" : {
+        "en" : "Check Slot",
+        "si" : "වේලාව පරීක්ෂා කරන්න"
+    },
+    "feat_heading" : {
+        "en" : "Structured For Your Success",
+        "si" : "ඔබේ සාර්ථකත්වය සඳහා සැලසුම් කළ පුහුණුවක්"
+    },
+    "feat_subheading" : {
+        "en" : "We design the process completely around your speed, comfort, and schedule.",
+        "si" : "ඔබේ වේගය, පහසුව සහ කාලසටහනට ගැළපෙන ලෙස අපගේ පුහුණු ක්‍රියාවලිය සැලසුම් කර ඇත."
+    },
+    "card1_title" : {
+        "en" : "Dual-Controlled Fleets",
+        "si" : "පුහුණුව සඳහා විශේෂ ද්විත්ව පාලන වාහන"
+    },
+    "card2_title" : {
+        "en" : "Flexible Hours",
+        "si" : "පහසු වේලාවන්"
+    },
+    "card3_title" : {
+        "en" : "Certified Guidance",
+        "si" : "සුදුසුකම් ලත් උපදේශනය"
+    },
+    "card1_desc" : {
+        "en" : " Learn safely with advanced vehicles modified to keep both you and the instructor perfectly secure.",
+        "si" : "ඔබේත් උපදේශකයාගේත් ආරක්ෂාව තහවුරු කරන නවීන පුහුණු වාහන සමඟ විශ්වාසයෙන් රිය පැදවීම ඉගෙන ගන්න."
+    },
+    "card2_desc" : {
+        "en" : " Schedule training slots early mornings, weekends, or late evenings around your university or work routine.",
+        "si" : "රැකියාවට හෝ අධ්‍යාපනයට බාධාවක් නොවන ලෙස පහසු වේලාවක් තෝරන්න."
+    },
+    "card3_desc" : {
+        "en" : "Gain access to certified professional male and female instruction styles calibrated perfectly to passing metrics.",
+        "si" : "ඔබේ සාර්ථකත්වය සඳහා සහතික ලත් පිරිමි හා කාන්තා උපදේශකවරුන්ගෙන් වෘත්තීය පුහුණුව ලබාගන්න."
+    }
+  },
+
+  "packages": {
+    "page_badge": {
+      "en": "💎 Transparent Pricing",
+      "si": "💎 විනිවිදභාවයෙන් යුතු මිල ගණන්"
+    },
+    "page_title_part1": {
+      "en": "Choose Your",
+      "si": "ඔබට ගැළපෙන"
+    },
+    "page_title_part2": {
+      "en": "Driving Course",
+      "si": "රියදුරු පාඨමාලාව තෝරාගන්න"
+    },
+    "page_desc": {
+      "en": "All packages include official RMV exam booking support, medical test alignment, and practical instruction options.",
+      "si": "සියලුම පැකේජයන් සඳහා නිල RMV විභාග වෙන්කරවා ගැනීමේ සහාය, වෛද්‍ය පරීක්ෂණ කටයුතු සහ ප්‍රායෝගික පුහුණු පහසුකම් ඇතුළත් වේ."
+    },
+    "badge_popular": {
+      "en": "Most Popular 🔥",
+      "si": "වඩාත්ම ජනප්‍රියයි 🔥"
+    },
+    "badge_value": {
+      "en": "Best Value 🏷️",
+      "si": "හොඳම වටිනාකම 🏷️"
+    },
+    "price_suffix": {
+      "en": "/ Full Course",
+      "si": "/ සම්පූර්ණ පාඨමාලාව සඳහා"
+    },
+    "btn_register": {
+      "en": "Register Now",
+      "si": "දැන්ම ලියාපදිංචි වන්න"
+    },
+    "section_arch": {
+      "en": "Course Architecture",
+      "si": "පාඨමාලා ව්‍යුහය"
+    },
+    "metrics_label": {
+      "en": "Training Metrics",
+      "si": "පුහුණු මිනුම්"
+    },
+    "class_label": {
+      "en": "Road Classifications",
+      "si": "මාර්ග වර්ගීකරණයන්"
+    },
+    "method_label": {
+      "en": "Instruction Method",
+      "si": "පුහුණු ක්‍රමවේදය"
+    },
+    "p1_title": {
+      "en": "Premium Dual-Vehicle Combo",
+      "si": "ප්‍රිමියම් ද්විත්ව වාහන පැකේජය"
+    },
+    "p1_subtitle": {
+      "en": "Car (Manual/Auto) + Motorbike",
+      "si": "මෝටර් රථ (මැනුවල්/ඔටෝ) + මෝටර් සයිකල්"
+    },
+    "p1_desc": {
+      "en": "Our absolute comprehensive course structure. Perfect for candidates looking to clear both light-vehicle and motorcycle classifications on their very first practical trial date.",
+      "si": "අපගේ වඩාත්ම සවිස්තරාත්මක පාඨමාලා ව්‍යුහයයි. පළමු ප්‍රායෝගික පරීක්ෂණ වාරයේදීම සැහැල්ලු වාහන සහ මෝටර් සයිකල් බලපත්‍ර දෙකම සමත් වීමට බලාපොරොත්තු වන අය සඳහා ඉතා කදිමයි."
+    },
+    "p1_metrics_val": {
+      "en": "15 Practical Car Hours + 5 Dedicated Bike Track Lessons.",
+      "si": "ප්‍රායෝගික මෝටර් රථ පුහුණු පැය 15 ක් + මෝටර් සයිකල් ධාවන පුහුණු වාර 5 ක්."
+    },
+    "p1_class_val": {
+      "en": "Residential Tracks, High-Traffic Intersections, and Night Progression.",
+      "si": "නේවාසික මාර්ග, අධික තදබදයක් සහිත හන්දි සහ රාත්‍රී කාලයේ රිය පැදවීමේ පුහුණුව."
+    },
+    "p1_perk": {
+      "en": "Installment payment plans available (Pay 50% upfront)",
+      "si": "කොටස් වශයෙන් මුදල් ගෙවීමේ පහසුකම් ඇත (පළමුව 50% ක් ගෙවිය හැක)"
+    },
+    "p2_title": {
+      "en": "Standard Light Vehicle",
+      "si": "සැහැල්ලු මෝටර් රථ පාඨමාලාව"
+    },
+    "p2_subtitle": {
+      "en": "Car Only (Manual or Automatic)",
+      "si": "මෝටර් රථ පමණි (මැනුවල් හෝ ඔටෝ)"
+    },
+    "p2_desc": {
+      "en": "Specifically designed to help students master light motor vehicles. Focuses deeply on standard maneuvers required for the driving test, reverse parking, and urban traffic road conditions.",
+      "si": "සැහැල්ලු මෝටර් රථ පැදවීම මනාව ප්‍රගුණ කිරීම සඳහාම විශේෂයෙන් සකස් කර ඇත. රියදුරු පරීක්ෂණය සඳහා අවශ්‍ය මූලික කුසලතා, පසුපසට වාහනය නැවැත්වීම (Reverse Parking) සහ නාගරික මාර්ග තදබදය පිළිබඳව මෙහිදී වැඩි අවධානයක් යොමු කෙරේ."
+    },
+    "p2_metrics_val": {
+      "en": "12 Fully Immersive Driving Track & On-Road Training Hours.",
+      "si": "පැය 12 ක පූර්ණ ප්‍රායෝගික ධාවන පථ සහ මාර්ග පුහුණුව."
+    },
+    "p2_method_val": {
+      "en": "Calm, structured 1-on-1 pacing, ideal for complete beginners.",
+      "si": "ආධුනිකයන් සඳහාම සකස් කරන ලද සන්සුන්, තනි තනිව ලබාදෙන පියවරෙන් පියවර පුහුණුව."
+    },
+    "p2_perk": {
+      "en": "Free revision lesson included if scheduled within 3 days of your exam slot.",
+      "si": "ඔබගේ විභාගයට දින 3 කට පෙර වෙන් කරවා ගන්නේ නම් නොමිලේ පුනරීක්ෂණ පුහුණු වාරයක් ඇතුළත් වේ."
+    }
+  },
+
+
+  "gallery": {
+    "page_badge": {
+      "en": "⚡ Life at Learnerce",
+      "si": "⚡ ලර්නර්ස් ජීවිතය"
+    },
+    "page_title_part1": {
+      "en": "Our",
+      "si": "අපගේ"
+    },
+    "page_title_part2": {
+      "en": "Success Gallery",
+      "si": "සාර්ථකත්වයේ ඡායාරූප එකතුව"
+    },
+    "page_desc": {
+      "en": "Explore real snapshots of our training fields, vehicle fleets, lecture rooms, and happy students receiving their driving licenses.",
+      "si": "අපගේ පුහුණු ක්ෂේත්‍ර, වාහන බලඇණි, දේශන ශාලා සහ රියදුරු බලපත්‍ර ලබා ගන්නා සන්තෝෂවත් සිසුන්ගේ සැබෑ ඡායාරූප නරඹන්න."
+    },
+    "click_to_view": {
+      "en": "Click to view photos",
+      "si": "ඡායාරූප බැලීමට ක්ලික් කරන්න"
+    },
+    "modal_hint": {
+      "en": "Click anywhere outside or the close button to return",
+      "si": "නැවත හැරීමට පිටතින් හෝ වසා දැමීමේ බොත්තම ක්ලික් කරන්න"
+    },
+    "label_graduates": {
+      "en": "License Winners 🏆",
+      "si": "බලපත්‍ර ජයග්‍රාහකයින් 🏆"
+    },
+    "label_fleet": {
+      "en": "Dual Control 🚗",
+      "si": "ද්විත්ව පාලනය 🚗"
+    },
+    "label_grounds": {
+      "en": "Practice Tracks 🛣️",
+      "si": "පුහුණු ධාවන පථ 🛣️"
+    },
+    "label_theory": {
+      "en": "Exam Prep 📝",
+      "si": "විභාග සූදානම 📝"
+    },
+    "card_graduates_title": {
+      "en": "Happy Graduates",
+      "si": "සතුටුදායක උපාධිධාරීන්"
+    },
+    "card_fleet_title": {
+      "en": "Training Vehicles",
+      "si": "පුහුණු වාහන"
+    },
+    "card_grounds_title": {
+      "en": "Practice Grounds",
+      "si": "පුහුණු පිටිය"
+    },
+    "card_theory_title": {
+      "en": "Lecture Sessions",
+      "si": "දේශන වාරයන්"
+    },
+    "title_graduates": {
+      "en": "Happy Graduates Gallery",
+      "si": "සතුටුදායක උපාධිධාරීන්ගේ එකතුව"
+    },
+    "title_fleet": {
+      "en": "Our Dual-Controlled Training Vehicles",
+      "si": "අපගේ ද්විත්ව පාලිත පුහුණු වාහන"
+    },
+    "title_grounds": {
+      "en": "Practice Field Track Layouts",
+      "si": "පුහුණු පිටියේ ධාවන පථ සැලසුම්"
+    },
+    "title_theory": {
+      "en": "Theory & Road Rules Classroom",
+      "si": "න්‍යායාත්මක සහ මාර්ග නීති පන්ති කාමරය"
+    }
+  },
+
+
+  "about": {
+    "page_badge": {
+      "en": "🌱 Since 2026",
+      "si": "🌱 2026 වසරේ සිට"
+    },
+    "page_title_part1": {
+      "en": "What is Our",
+      "si": "මොකක්ද අපේ"
+    },
+    "page_title_part2": {
+      "en": "Learnerce?",
+      "si": "ලර්නර්ස් ආයතනය?"
+    },
+    "page_desc": {
+      "en": "Learnerce is a premium, modern driving education center established to transform the way beginners learn to navigate the roads. We don't just prepare you to pass your driving test; we combine advanced psychological safety routing with custom simulator infrastructure to instill lifetime defensive driving instincts.",
+      "si": "ලර්නර්ස් යනු ආධුනිකයන් ආරක්ෂිතව රිය පැදවීමට හුරු කරවීම සඳහාම ආරම්භ කරන ලද නවීනතම උසස් රියදුරු පුහුණු මධ්‍යස්ථානයකි. අපි ඔබව රියදුරු පරීක්ෂණයෙන් සමත් කිරීමට පමණක් සූදානම් නොකරමු; ජීවිත කාලය පුරාම ආරක්ෂිතව සහ වගකීමෙන් යුතුව රිය පැදවීමේ සහජ බුද්ධිය ඔබ තුළ ඇති කිරීම සඳහා අපි උසස් මනෝවිද්‍යාත්මක ක්‍රමවේද සහ නවීන සිමියුලේටර් තාක්ෂණය (Simulator Classrooms) එකට ඒකාබද්ධ කර ඇත්තෙමු."
+    },
+    "section_why": {
+      "en": "Why Choose Us",
+      "si": "අපව තෝරා ගැනීමට හේතු"
+    },
+    "card1_title": {
+      "en": "Patient Methodology",
+      "si": "ඉවසිලිවන්ත පුහුණු ක්‍රමවේදය"
+    },
+    "card1_desc": {
+      "en": "Calm, structured 1-on-1 programs engineered specifically for absolute beginners and nervous drivers.",
+      "si": "ආධුනිකයන් මෙන්ම රිය පැදවීමට බියක් දක්වන අය සඳහාම විශේෂයෙන් සකස් කරන ලද, ඉතා සන්සුන්ව පවත්වන 1-on-1 පෞද්ගලික පුහුණු වැඩසටහන්."
+    },
+    "card2_title": {
+      "en": "Elite Pass Rate",
+      "si": "ඉහළම සමත් වීමේ ප්‍රතිශතය"
+    },
+    "card2_desc": {
+      "en": "Over 98% of our students clear their official trial license logs on their very first practical trial date.",
+      "si": "අපගේ සිසුන්ගෙන් 98% කට වඩා වැඩි ප්‍රමාණයක් ඔවුන්ගේ ප්‍රථම ප්‍රායෝගික පරීක්ෂණයේදීම (Trial Date) නිල රියදුරු බලපත්‍රය ඉතා පහසුවෙන් සමත් වෙති."
+    },
+    "video_title": {
+      "en": "How We Train",
+      "si": "අපි පුහුණු කරන්නේ කෙසේද"
+    },
+    "video_desc": {
+      "en": "Take a comprehensive digital walk-through of our training execution roadmap. Watch how we combine high-fidelity laboratory driving simulators with isolated dual-control track practice before stepping onto real highway junctions.",
+      "si": "අපගේ රියදුරු පුහුණු ක්‍රියාවලිය සිදුවන ආකාරය පිළිබඳ සම්පූර්ණ දළ විශ්ලේෂණයක් මෙතැනින් නරඹන්න. සැබෑ මහා මාර්ගවලට පිවිසීමට පෙර, අපි උසස් සිමියුලේටර් මඟින් පන්ති කාමරය තුළදී සහ ද්විත්ව පාලන (Dual-Control) රථ මඟින් විශේෂ පුහුණු ධාවන පථවලදී ඔබව පුහුණු කරවන ආකාරය බලන්න."
+    },
+    "video_badge": {
+      "en": "4-Minute Strategy Video",
+      "si": "විනාඩි 4 ක පැහැදිලි කිරීමේ වීඩියෝව"
+    },
+    "map_title": {
+      "en": "Visit Our Headquarters",
+      "si": "අපගේ ප්‍රධාන මධ්‍යස්ථානය වෙත පැමිණෙන්න"
+    },
+    "map_desc": {
+      "en": "Our main operational branch and lecture classrooms are structured right in the heart of Godigamuwa. Stop by to view our simulator rooms or to easily process your documentation paperwork.",
+      "si": "අපගේ ප්‍රධාන මෙහෙයුම් ශාඛාව සහ දේශන ශාලා නයිවල නගරය මධ්‍යයේම පිහිටුවා ඇත. අපගේ සිමියුලේටර් කාමර නැරඹීමට හෝ ඔබගේ ලියාපදිංචි ලේඛන කටයුතු පහසුවෙන් කරවා ගැනීමට අදම පැමිණෙන්න."
+    },
+    "map_label": {
+      "en": "Main Address Office:",
+      "si": "ප්‍රධාන කාර්යාල ලිපිනය:"
+    },
+    "map_hint": {
+      "en": "Located adjacent to the iconic M.B. Ground complex.",
+      "si": "ප්‍රසිද්ධ එම්.බී. ක්‍රීඩාංගණ සංකීර්ණය අසල පිහිටා ඇත."
+    }
+  },
+
+  "contact": {
+    "page_badge": {
+      "en": "✉️ Get In Touch",
+      "si": "✉️ අප හා සම්බන්ධ වන්න"
+    },
+    "page_title_part1": {
+      "en": "We're Here to",
+      "si": "ආරක්ෂිතව රිය පැදවීමට"
+    },
+    "page_title_part2": {
+      "en": "Help You Drive",
+      "si": "අපි ඔබට මඟ පෙන්වන්නෙමු"
+    },
+    "page_desc": {
+      "en": "Have questions about our training metrics, scheduling hours, or license processing? Drop us a message or contact us directly.",
+      "si": "අපගේ පුහුණු ක්‍රමවේද, පුහුණු වේලාවන් හෝ රියදුරු බලපත්‍ර ලියාපදිංචි කටයුතු පිළිබඳව ගැටලු පවතීද? අපට පණිවිඩයක් එවන්න නැතහොත් සෘජුවම සම්බන්ධ වන්න."
+    },
+    "form_heading": {
+      "en": "Send Us a Message",
+      "si": "අපට පණිවිඩයක් එවන්න"
+    },
+    "label_name": {
+      "en": "Full Name",
+      "si": "සම්පූර්ණ නම"
+    },
+    "label_email": {
+      "en": "Email Address",
+      "si": "විද්‍යුත් තැපෑල (Email)"
+    },
+    "label_phone": {
+      "en": "Contact Number",
+      "si": "දුරකථන අංකය"
+    },
+    "label_vehicle": {
+      "en": "Interested Vehicle Category",
+      "si": "ඔබ පුහුණු වීමට බලාපොරොත්තු වන වාහන කාණ්ඩය"
+    },
+    "label_message": {
+      "en": "Your Message",
+      "si": "ඔබගේ පණිවිඩය"
+    },
+    "opt_placeholder": {
+      "en": "Select a category",
+      "si": "වාහන කාණ්ඩයක් තෝරන්න"
+    },
+    "opt_car_auto": {
+      "en": "Light Vehicle (Car - Auto)",
+      "si": "සැහැල්ලු වාහන (මෝටර් රථ - ඔටෝ)"
+    },
+    "opt_car_manual": {
+      "en": "Light Vehicle (Car - Manual)",
+      "si": "සැහැල්ලු වාහන (මෝටර් රථ - මැනුවල්)"
+    },
+    "opt_dual_combo": {
+      "en": "Dual Combo (Car + Motorbike)",
+      "si": "ද්විත්ව පැකේජය (මෝටර් රථ + මෝටර් සයිකල්)"
+    },
+    "opt_express": {
+      "en": "Express Exam Refresher Track",
+      "si": "විභාගය සඳහා වන කඩිනම් පුහුණුව"
+    },
+    "btn_submit": {
+      "en": "Send Message",
+      "si": "පණිවිඩය යොමු කරන්න"
+    },
+    "support_title": {
+      "en": "Instant WhatsApp Support",
+      "si": "ක්ෂණික වට්ස්ඇප් (WhatsApp) සහාය"
+    },
+    "support_subtitle": {
+      "en": "Chat with our coordination desk live",
+      "si": "අපගේ සම්බන්ධීකරණ නිලධාරීන් සමඟ සජීවීව සම්බන්ධ වන්න"
+    },
+    "requirements_title": {
+      "en": "Registration Requirements",
+      "si": "ලියාපදිංචිය සඳහා අවශ්‍ය දෑ"
+    },
+    "requirements_desc": {
+      "en": "When visiting our campus to confirm a booked slot, please bring your National Identity Card (NIC) and 2 passport-sized photographs to quickly process your RMV medical document file.",
+      "si": "වෙන් කරවා ගත් පුහුණු කාලසටහන තහවුරු කර ගැනීමට පැමිණෙන විට, ඔබගේ RMV වෛද්‍ය වාර්තා කටයුතු කඩිනමින් සිදු කර ගැනීම සඳහා ජාතික හැඳුනුම්පත (NIC) සහ පැස්පෝර්ට් ප්‍රමාණයේ (Passport-sized) ඡායාරූප 2ක් රැගෙන එන්න."
+    },
+    "alert_success_prefix": {
+      "en": "Thank you",
+      "si": "ස්තූතියි"
+    },
+    "alert_success_suffix": {
+      "en": "Your driving layout message query has been safely submitted.",
+      "si": "ඔබගේ පණිවිඩය සාර්ථකව අප වෙත ලැබී ඇත."
+    }
+  },
+
+  "exam": {
+    "page_badge": {
+      "en": "📝 Official Mock Evaluation",
+      "si": "📝 නිල ආදර්ශ ඇගයීම් පරීක්ෂණය"
+    },
+    "page_title_part1": {
+      "en": "Driving Theory",
+      "si": "රියදුරු න්‍යායාත්මක"
+    },
+    "page_title_part2": {
+      "en": "Practice Exam",
+      "si": "ආදර්ශ විභාගය"
+    },
+    "btn_start": {
+      "en": "Start MCQ Examination",
+      "si": "බහුවරණ ප්‍රශ්න පත්‍රය ආරම්භ කරන්න"
+    },
+    "btn_prev": {
+      "en": "← Previous",
+      "si": "← පසුගිය පිටුව"
+    },
+    "btn_next": {
+      "en": "Next Question →",
+      "si": "මීළඟ ප්‍රශ්නය →"
+    },
+    "label_progress": {
+      "en": "Progress:",
+      "si": "ප්‍රගතිය:"
+    },
+    "label_q": {
+      "en": "Q",
+      "si": "ප්‍රශ්න"
+    },
+    "label_of": {
+      "en": "of",
+      "si": "න්"
+    },
+    "label_question": {
+      "en": "Question",
+      "si": "ප්‍රශ්නය"
+    },
+    "alert_time_up": {
+      "en": "The allotted 25-minute practice session time has concluded. Your exam answers have been submitted.",
+      "si": "විභාගය සඳහා වෙන් කරන ලද විනාඩි 25 ක කාලය අවසන් වී ඇත. ඔබගේ පිළිතුරු ස්වයංක්‍රීයව ඉදිරිපත් කර ඇත."
+    },
+    "alert_next_question": {
+      "en": "UI State Change Confirmed: In production logic, this step loads the next array index object data cleanly.",
+      "si": "තහවුරු කිරීම: මීළඟ ප්‍රශ්න දත්ත මෙතැනින් පූරණය වනු ඇත."
+    },
+    "q1_text": {
+      "en": "When approaching a pedestrian crossing where people are waiting to cross the road structure, what is the correct defensive execution?",
+      "si": "මිනිසුන් මාරුවීමට බලා සිටින පදික මාරුවක් (කහ ඉරක්) වෙත ළඟා වන විට, නිවැරදි ආරක්ෂිත රිය පැදවීමේ පියවර කුමක්ද?"
+    },
+    "q1_opt1": {
+      "en": "Sound the horn continuously to warn pedestrians.",
+      "si": "පදිකයින්ට අනතුරු ඇඟවීම සඳහා දිගින් දිගටම නාද නිකුත් කිරීම (Horn)."
+    },
+    "q1_opt2": {
+      "en": "Slow down immediately, approach with care, and stop completely.",
+      "si": "වේගය වහාම අඩු කර, ප්‍රවේශමෙන් ඉදිරියට ගොස් පදික මාරුව ඉදිරිපිට සම්පූර්ණයෙන්ම වාහනය නවත්වන්න."
+    },
+    "q8_text": {
+      "en": "What does a flashing amber light transition signal indicate at an intersection system?",
+      "si": "හන්දියක දැල්වෙමින් නිවෙමින් පවතින කහ පැහැති ආලෝක සංඥාවකින් (Flashing Amber Light) අදහස් කරන්නේ කුමක්ද?"
+    },
+    "q8_opt1": {
+      "en": "Proceed with caution after yielding to vehicles on the major road.",
+      "si": "ප්‍රධාන මාර්ගයේ එන වාහනවලට ප්‍රමුඛතාවය දී අවධානයෙන් යුතුව ඉදිරියට යන්න."
+    },
+    "q8_opt2": {
+      "en": "Accelerate quickly to clear the crossing path grid before it alters.",
+      "si": "ආලෝකය වෙනස් වීමට පෙර හන්දිය පසු කිරීම සඳහා වේගයෙන් වාහනය ධාවනය කරන්න."
+    }
+  },
+
+  "feedback": {
+    "page_badge": {
+      "en": "💬 Student Testimonials",
+      "si": "💬 ශිෂ්‍ය අදහස්"
+    },
+    "page_title_part1": {
+      "en": "Share Your",
+      "si": "ඔබේ පුහුණු"
+    },
+    "page_title_part2": {
+      "en": "Learning Experience",
+      "si": "අත්දැකීම් අප සමඟ බෙදාගන්න"
+    },
+    "page_desc": {
+      "en": "Your valuable feedback helps us constantly refine our defensive instruction strategies and modern simulator frameworks.",
+      "si": "ඔබ ලබාදෙන වටිනා අදහස් අපගේ ආරක්ෂිත රියදුරු පුහුණු ක්‍රමවේදයන් සහ නවීන සිමියුලේටර් පද්ධති තවදුරටත් සංවර්ධනය කිරීමට උපකාරී වේ."
+    },
+    "label_rating": {
+      "en": "Overall Experience Rating",
+      "si": "සම්පූර්ණ පුහුණු කාලසීමාව පිළිබඳ ඇගයීම"
+    },
+    "label_name": {
+      "en": "Your Name",
+      "si": "ඔබේ නම"
+    },
+    "label_instructor": {
+      "en": "Your Primary Instructor",
+      "si": "ඔබට පුහුණුව ලබාදුන් ප්‍රධාන උපදේශකයා"
+    },
+    "label_package": {
+      "en": "Completed Training Package",
+      "si": "ඔබ අවසන් කරන ලද පුහුණු පැකේජය"
+    },
+    "label_comments": {
+      "en": "Your Review / Comments",
+      "si": "ඔබේ අදහස් සහ යෝජනා"
+    },
+    "opt_instructor_placeholder": {
+      "en": "Select your coach",
+      "si": "ඔබේ උපදේශකයා තෝරන්න"
+    },
+    "pkg_combo": {
+      "en": "🚗 + 🏍️ Premium Combo",
+      "si": "🚗 + 🏍️ ප්‍රිමියම් ද්විත්ව පැකේජය"
+    },
+    "pkg_car": {
+      "en": "Car Only Standard",
+      "si": "මෝටර් රථ පමණි (සාමාන්‍ය)"
+    },
+    "pkg_express": {
+      "en": "⚡ Express Refresher",
+      "si": "⚡ කඩිනම් පුහුණුව"
+    },
+    "btn_submit": {
+      "en": "Submit My Feedback",
+      "si": "මගේ අදහස් ඉදිරිපත් කරන්න"
+    },
+    "alert_no_rating": {
+      "en": "Please click a star rating configuration metric to provide a numeric score before submitting.",
+      "si": "කරුණාකර ඉදිරිපත් කිරීමට පෙර තරුවක් ක්ලික් කර ඔබේ ඇගයීම් ලකුණ ලබා දෙන්න."
+    },
+    "alert_success": {
+      "en": "Thank you! Your learning review asset record has been received successfully.",
+      "si": "ස්තූතියි! ඔබේ වටිනා අදහස් සාර්ථකව අප වෙත ලැබුණි."
+    }
+  },
+
+
+  "footer": {
+    "team_heading": {
+      "en": "Our Core Leadership & Management Team",
+      "si": "අපගේ ප්‍රධාන නායකත්ව සහ කළමනාකරණ කණ්ඩායම"
+    },
+    "role_sarah": {
+      "en": "Senior Car Coach & Managing Director",
+      "si": "ජ්‍යෙෂ්ඨ මෝටර් රථ පුහුණුකරු සහ කළමනාකාර අධ්‍යක්ෂ"
+    },
+    "role_david": {
+      "en": "Dual Transmission Specialist",
+      "si": "ද්විත්ව සම්ප්‍රේෂණ විශේෂඥ (Manual/Auto Specialist)"
+    },
+    "role_jude": {
+      "en": "Motorcycle Training Operations Lead",
+      "si": "මෝටර් සයිකල් පුහුණු මෙහෙයුම් ප්‍රධානී"
+    },
+    "branding_desc": {
+      "en": "Empowering individuals with modern driving mechanics and lifelong safety habits. Register today and get your license seamlessly.",
+      "si": "නවීන රියදුරු ක්‍රමවේද සහ ජීවිත කාලයටම වැදගත් වන ආරක්ෂිත පුරුදු සමඟින් ඔබව සවිබල ගැන්වීම. බාධාවකින් තොරව ඔබගේ රියදුරු බලපත්‍රය ලබා ගැනීමට අදම ලියාපදිංචි වන්න."
+    },
+    "connect_heading": {
+      "en": "Connect With Us",
+      "si": "අප හා සම්බන්ධ වන්න"
+    },
+    "social_heading": {
+      "en": "Follow & Share",
+      "si": "අපව අනුගමනය කරන්න"
+    },
+    "social_desc": {
+      "en": "Join our digital community of safe drivers.",
+      "si": "ආරක්ෂිත රියදුරන්ගේ අපගේ ඩිජිටල් ප්‍රජාව සමඟ සම්බන්ධ වන්න."
+    },
+    "working_hours": {
+      "en": "Mon - Sat: 10:00 AM - 09:00 PM",
+      "si": "සඳුදා - සෙනසුරාදා: පෙ.ව. 10:00 - ප.ව. 09:00"
+    },
+    "terms": {
+      "en": "Terms of Service",
+      "si": "සේවා කොන්දේසි"
+    },
+    "privacy": {
+      "en": "Privacy Policy",
+      "si": "රහස්‍යතා ප්‍රතිපත්තිය"
+    }
+  }
+}
