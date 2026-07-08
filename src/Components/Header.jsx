@@ -32,6 +32,16 @@ export default function Header() {
         : "font-semibold text-slate-600 hover:text-slate-900"
     }`;
 
+  // Force snap calculation block to guarantee top screen alignment instantly
+  const handleNavigationClick = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Skips smooth scroll delays to prevent layout stuck states
+    });
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-sm w-full">
@@ -41,6 +51,7 @@ export default function Header() {
             {/* Logo linked to home natively */}
             <Link
               to="/"
+              onClick={handleNavigationClick}
               className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 transform transition-all duration-150 active:scale-95 cursor-pointer max-w-[70%] sm:max-w-none"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-md shadow-indigo-600/10 flex-shrink-0">
@@ -48,7 +59,6 @@ export default function Header() {
                   L
                 </span>
               </div>
-              {/* RESPONSIVE SIZE: Added fluid text scaling classes here to stop layout text from eating menu bar columns */}
               <span className="text-xs xs:text-sm sm:text-xl font-extrabold text-slate-900 tracking-tight notranslate truncate sm:whitespace-normal">
                 THISARA DRIVING SCHOOL
               </span>
@@ -56,23 +66,43 @@ export default function Header() {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
-              <Link to="/" className={linkClass("/")}>
+              <Link
+                to="/"
+                onClick={handleNavigationClick}
+                className={linkClass("/")}
+              >
                 {t("nav.home", currentLang)}
               </Link>
 
-              <Link to="/Packages" className={linkClass("/Packages")}>
+              <Link
+                to="/Packages"
+                onClick={handleNavigationClick}
+                className={linkClass("/Packages")}
+              >
                 {t("nav.packages", currentLang)}
               </Link>
 
-              <Link to="/Gallery" className={linkClass("/Gallery")}>
+              <Link
+                to="/Gallery"
+                onClick={handleNavigationClick}
+                className={linkClass("/Gallery")}
+              >
                 {t("nav.gallery", currentLang)}
               </Link>
 
-              <Link to="/About" className={linkClass("/About")}>
+              <Link
+                to="/About"
+                onClick={handleNavigationClick}
+                className={linkClass("/About")}
+              >
                 {t("nav.about", currentLang)}
               </Link>
 
-              <Link to="/Contact" className={linkClass("/Contact")}>
+              <Link
+                to="/Contact"
+                onClick={handleNavigationClick}
+                className={linkClass("/Contact")}
+              >
                 {t("nav.contact", currentLang)}
               </Link>
             </div>
@@ -133,7 +163,7 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Mobile Actions Container - Flex structure keeps buttons from jumping rows */}
+            {/* Mobile Actions Container */}
             <div className="md:hidden flex items-center space-x-1.5 sm:space-x-2 z-50 flex-shrink-0">
               <button
                 type="button"
@@ -172,35 +202,35 @@ export default function Header() {
           <div className="md:hidden absolute top-20 left-0 w-full border-t border-slate-100 bg-white py-4 px-6 space-y-2 shadow-xl z-40 animate-fadeIn">
             <Link
               to="/"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavigationClick}
               className={`block px-4 py-2 rounded-xl text-sm ${isCurrentPath("/") ? "bg-indigo-50 font-bold text-indigo-600" : "font-medium text-slate-600"}`}
             >
               {t("nav.home", currentLang)}
             </Link>
             <Link
               to="/Packages"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavigationClick}
               className={`block px-4 py-2 rounded-xl text-sm ${isCurrentPath("/Packages") ? "bg-indigo-50 font-bold text-indigo-600" : "font-medium text-slate-600"}`}
             >
               {t("nav.packages", currentLang)}
             </Link>
             <Link
               to="/Gallery"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavigationClick}
               className={`block px-4 py-2 rounded-xl text-sm ${isCurrentPath("/Gallery") ? "bg-indigo-50 font-bold text-indigo-600" : "font-medium text-slate-600"}`}
             >
               {t("nav.gallery", currentLang)}
             </Link>
             <Link
               to="/About"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavigationClick}
               className={`block px-4 py-2 rounded-xl text-sm ${isCurrentPath("/About") ? "bg-indigo-50 font-bold text-indigo-600" : "font-medium text-slate-600"}`}
             >
               {t("nav.about", currentLang)}
             </Link>
             <Link
               to="/Contact"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavigationClick}
               className={`block px-4 py-2 rounded-xl text-sm ${isCurrentPath("/Contact") ? "bg-indigo-50 font-bold text-indigo-600" : "font-medium text-slate-600"}`}
             >
               {t("nav.contact", currentLang)}

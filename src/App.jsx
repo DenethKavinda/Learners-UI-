@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./Components/ScrollToTop"; // Import the ScrollToTop component
 import Home from "./Home";
 import Packages from "./Packages";
 import Gallery from "./Gallery";
