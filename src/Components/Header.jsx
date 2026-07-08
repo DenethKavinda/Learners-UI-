@@ -34,22 +34,22 @@ export default function Header() {
 
   return (
     <>
-      {/* Changed absolute/sticky parameters to a true top screen fixed layout overlay alignment block */}
       <nav className="fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-sm w-full">
         {/* Full-width container lining up exactly with pages */}
-        <div className="w-full mx-auto px-6 sm:px-12 lg:px-24">
-          <div className="flex justify-between h-20 items-center w-full">
+        <div className="w-full mx-auto px-4 sm:px-12 lg:px-24">
+          <div className="flex justify-between h-20 items-center w-full relative">
             {/* Logo linked to home natively */}
             <Link
               to="/"
-              className="flex-shrink-0 flex items-center gap-2 transform transition-all duration-150 active:scale-95 cursor-pointer"
+              className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 transform transition-all duration-150 active:scale-95 cursor-pointer max-w-[70%] sm:max-w-none"
             >
-              <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-md shadow-indigo-600/10">
-                <span className="text-white font-black text-xl tracking-wider">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-md shadow-indigo-600/10 flex-shrink-0">
+                <span className="text-white font-black text-lg sm:text-xl tracking-wider">
                   L
                 </span>
               </div>
-              <span className="text-xl font-extrabold text-slate-900 tracking-tight notranslate">
+              {/* RESPONSIVE SIZE: Added fluid text scaling classes here to stop layout text from eating menu bar columns */}
+              <span className="text-xs xs:text-sm sm:text-xl font-extrabold text-slate-900 tracking-tight notranslate truncate sm:whitespace-normal">
                 THISARA DRIVING SCHOOL
               </span>
             </Link>
@@ -77,7 +77,7 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Language Switcher Dropdown Action */}
+            {/* Language Switcher Dropdown Action (Desktop Mode Only) */}
             <div className="hidden md:flex items-center space-x-4">
               <div className="relative inline-block text-left">
                 <button
@@ -133,12 +133,12 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Mobile View Toggle Buttons */}
-            <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile Actions Container - Flex structure keeps buttons from jumping rows */}
+            <div className="md:hidden flex items-center space-x-1.5 sm:space-x-2 z-50 flex-shrink-0">
               <button
                 type="button"
                 onClick={toggleMobileLanguage}
-                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold bg-slate-50 border border-slate-200 text-slate-600 transition-all"
+                className="inline-flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-bold bg-slate-50 border border-slate-200 text-slate-600 transition-all active:scale-95"
               >
                 <span>🌐</span>
                 <span>{currentLang === "si" ? "සිං" : "EN"}</span>
@@ -169,7 +169,7 @@ export default function Header() {
 
         {/* Mobile Menu Content Panel Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-100 bg-white py-4 px-6 space-y-2 animate-fadeIn">
+          <div className="md:hidden absolute top-20 left-0 w-full border-t border-slate-100 bg-white py-4 px-6 space-y-2 shadow-xl z-40 animate-fadeIn">
             <Link
               to="/"
               onClick={() => setIsMobileMenuOpen(false)}

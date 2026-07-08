@@ -122,7 +122,7 @@ export default function Home() {
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                   <a
-                    href="#"
+                    href="/Packages"
                     className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/10 transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95 text-center"
                   >
                     {translate("home.btn_book")}
