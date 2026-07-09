@@ -63,7 +63,7 @@ export default function Gallery() {
                     background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
                     background-size: 24px 24px;
                 }
-                html[lang=\"si\"] body {
+                html[lang="si"] body {
                     line-height: 1.65 !important;
                 }
             `}</style>
@@ -77,12 +77,14 @@ export default function Gallery() {
         <div className="w-full mx-auto">
           {/* Header Sizing */}
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-indigo-600 border border-slate-200 shadow-sm tracking-wide uppercase">
+            {/* Updated badge with Brand Green color matching logo */}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-emerald-700 border border-slate-200 shadow-sm tracking-wide uppercase">
               {translate("gallery.page_badge")}
             </span>
             <h1 className="text-4xl font-black text-slate-900 tracking-tight">
               {translate("gallery.page_title_part1")}{" "}
-              <span className="text-indigo-600">
+              {/* Updated accent title section with Deep Green */}
+              <span className="text-emerald-700">
                 {translate("gallery.page_title_part2")}
               </span>
             </h1>
@@ -109,7 +111,8 @@ export default function Gallery() {
                 </span>
               </div>
               <div className="pt-4 px-1">
-                <h3 className="font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors text-base">
+                {/* Brand Green color applied dynamically to hover state matching logo */}
+                <h3 className="font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors text-base">
                   {translate("gallery.card_graduates_title")}
                 </h3>
                 <p className="text-xs font-semibold text-slate-400 mt-0.5">
@@ -134,7 +137,8 @@ export default function Gallery() {
                 </span>
               </div>
               <div className="pt-4 px-1">
-                <h3 className="font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors text-base">
+                {/* Brand Green color applied dynamically to hover state matching logo */}
+                <h3 className="font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors text-base">
                   {translate("gallery.card_fleet_title")}
                 </h3>
                 <p className="text-xs font-semibold text-slate-400 mt-0.5">
@@ -159,7 +163,8 @@ export default function Gallery() {
                 </span>
               </div>
               <div className="pt-4 px-1">
-                <h3 className="font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors text-base">
+                {/* Brand Green color applied dynamically to hover state matching logo */}
+                <h3 className="font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors text-base">
                   {translate("gallery.card_grounds_title")}
                 </h3>
                 <p className="text-xs font-semibold text-slate-400 mt-0.5">
@@ -184,7 +189,8 @@ export default function Gallery() {
                 </span>
               </div>
               <div className="pt-4 px-1">
-                <h3 className="font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors text-base">
+                {/* Brand Green color applied dynamically to hover state matching logo */}
+                <h3 className="font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors text-base">
                   {translate("gallery.card_theory_title")}
                 </h3>
                 <p className="text-xs font-semibold text-slate-400 mt-0.5">

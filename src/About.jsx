@@ -72,12 +72,14 @@ export default function About() {
           {/* Intro Section */}
           <section className="grid lg:grid-cols-12 gap-12 items-center reveal-on-scroll w-full">
             <div className="lg:col-span-6 space-y-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-indigo-600 border border-slate-200 shadow-sm tracking-wide uppercase transform hover:scale-105 transition-transform duration-300">
+              {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-emerald-700 border border-slate-200 shadow-sm tracking-wide uppercase transform hover:scale-105 transition-transform duration-300">
                 {translate("about.page_badge")}
               </span>
               <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                 {translate("about.page_title_part1")}{" "}
-                <span className="text-indigo-600">
+                {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+                <span className="text-emerald-700">
                   {translate("about.page_title_part2")}
                 </span>
               </h1>
@@ -86,20 +88,23 @@ export default function About() {
               </p>
 
               <div className="space-y-4 pt-2">
-                <h3 className="text-xs font-bold text-indigo-600 uppercase tracking-widest">
+                {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+                <h3 className="text-xs font-bold text-emerald-700 uppercase tracking-widest">
                   {translate("about.section_why")}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300 transform hover:-translate-y-1 h-auto min-h-[140px]">
+                  {/* BRAND COLOR UPDATE: hover:border-indigo-100 to hover:border-emerald-100, text-indigo-500 to text-emerald-700 */}
+                  <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-100 transition-all duration-300 transform hover:-translate-y-1 h-auto min-h-[140px]">
                     <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                      <span className="text-indigo-500">✨</span>{" "}
+                      <span className="text-emerald-700">✨</span>{" "}
                       {translate("about.card1_title")}
                     </h4>
                     <p className="text-xs font-medium text-slate-500 mt-2 leading-relaxed">
                       {translate("about.card1_desc")}
                     </p>
                   </div>
-                  <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300 transform hover:-translate-y-1 h-auto min-h-[140px]">
+                  {/* BRAND COLOR UPDATE: hover:border-indigo-100 to hover:border-emerald-100 */}
+                  <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-100 transition-all duration-300 transform hover:-translate-y-1 h-auto min-h-[140px]">
                     <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
                       <span className="text-emerald-500">📈</span>{" "}
                       {translate("about.card2_title")}
@@ -113,7 +118,8 @@ export default function About() {
             </div>
 
             <div className="lg:col-span-6 relative group w-full">
-              <div className="absolute inset-0 bg-indigo-600/5 rounded-3xl blur-xl group-hover:bg-indigo-600/10 transition-all duration-500"></div>
+              {/* BRAND COLOR UPDATE: bg-indigo-600/5 to bg-emerald-700/5, group-hover:bg-indigo-600/10 to group-hover:bg-emerald-700/10 */}
+              <div className="absolute inset-0 bg-emerald-700/5 rounded-3xl blur-xl group-hover:bg-emerald-700/10 transition-all duration-500"></div>
               <div className="bg-white p-4 rounded-3xl shadow-xl shadow-slate-200/40 border border-slate-200/60 relative transform group-hover:scale-[1.01] transition-all duration-500 ease-out w-full">
                 <div className="w-full aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 relative">
                   <img
@@ -136,8 +142,9 @@ export default function About() {
               <p className="text-sm sm:text-base font-medium text-slate-600 leading-relaxed">
                 {translate("about.video_desc")}
               </p>
+              {/* BRAND COLOR UPDATE: text-indigo-600 to text-emerald-700, bg-indigo-50 to bg-emerald-50 */}
               <div
-                className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-xl animate-bounce"
+                className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl animate-bounce"
                 style={{ animationDuration: "3s" }}
               >
                 <span>▶</span> {translate("about.video_badge")}
@@ -167,8 +174,9 @@ export default function About() {
                 {translate("about.map_desc")}
               </p>
               <div className="text-xs font-semibold text-slate-500 space-y-1.5 inline-block text-left p-5 bg-white rounded-2xl border border-slate-100 shadow-inner w-full max-w-sm">
+                {/* BRAND COLOR UPDATE: bg-indigo-600 to bg-emerald-700 */}
                 <p className="text-slate-900 font-bold flex items-center gap-1.5">
-                  <span className="inline-block w-2 h-2 rounded-full bg-indigo-600"></span>{" "}
+                  <span className="inline-block w-2 h-2 rounded-full bg-emerald-700"></span>{" "}
                   {translate("about.map_label")}
                 </p>
                 <p className="pl-3.5 notranslate text-slate-700 font-medium">

@@ -86,12 +86,14 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-16 reveal-on-scroll">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-indigo-600 border border-slate-200 shadow-sm tracking-wide uppercase">
+            {/* BRAND COLOR UPDATE: changed text-indigo-600 to text-emerald-700 */}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-emerald-700 border border-slate-200 shadow-sm tracking-wide uppercase">
               {translate("contact.page_badge")}
             </span>
             <h1 className="text-4xl font-black text-slate-900 tracking-tight">
               {translate("contact.page_title_part1")}{" "}
-              <span className="text-indigo-600">
+              {/* BRAND COLOR UPDATE: changed text-indigo-600 to text-emerald-700 */}
+              <span className="text-emerald-700">
                 {translate("contact.page_title_part2")}
               </span>
             </h1>
@@ -115,6 +117,7 @@ export default function Contact() {
                   >
                     {translate("contact.label_name")}
                   </label>
+                  {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                   <input
                     type="text"
                     id="name"
@@ -123,7 +126,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="John Doe"
                     required
-                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all"
+                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-emerald-600 focus:bg-white transition-all"
                   />
                 </div>
 
@@ -135,6 +138,7 @@ export default function Contact() {
                     >
                       {translate("contact.label_email")}
                     </label>
+                    {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                     <input
                       type="email"
                       id="email"
@@ -143,7 +147,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
-                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-emerald-600 focus:bg-white transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -153,6 +157,7 @@ export default function Contact() {
                     >
                       {translate("contact.label_phone")}
                     </label>
+                    {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                     <input
                       type="tel"
                       id="phone"
@@ -161,7 +166,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="+94 7X XXX XXXX"
                       required
-                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-emerald-600 focus:bg-white transition-all"
                     />
                   </div>
                 </div>
@@ -174,13 +179,14 @@ export default function Contact() {
                     {translate("contact.label_vehicle")}
                   </label>
                   <div className="relative">
+                    {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                     <select
                       id="vehicle_type"
                       name="vehicle_type"
                       value={formData.vehicle_type}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-700 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all appearance-none cursor-pointer"
+                      className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-700 focus:outline-none focus:border-emerald-600 focus:bg-white transition-all appearance-none cursor-pointer"
                     >
                       <option value="" disabled>
                         {translate("contact.opt_placeholder")}
@@ -211,6 +217,7 @@ export default function Contact() {
                   >
                     {translate("contact.label_message")}
                   </label>
+                  {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                   <textarea
                     id="message"
                     name="message"
@@ -219,13 +226,14 @@ export default function Contact() {
                     rows="4"
                     placeholder="..."
                     required
-                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all resize-none"
+                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 font-medium text-sm text-slate-800 focus:outline-none focus:border-emerald-600 focus:bg-white transition-all resize-none"
                   ></textarea>
                 </div>
 
+                {/* BRAND COLOR UPDATE: changed bg-indigo-600 hover:bg-indigo-700 to bg-emerald-700 hover:bg-emerald-800 */}
                 <button
                   type="submit"
-                  className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition-all active:scale-[0.99]"
+                  className="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl shadow-md transition-all active:scale-[0.99]"
                 >
                   {translate("contact.btn_submit")}
                 </button>
@@ -255,11 +263,12 @@ export default function Contact() {
                 </div>
               </a>
 
-              <div className="bg-indigo-50/50 rounded-2xl border border-indigo-100/80 p-6 space-y-2">
-                <h4 className="text-xs font-bold text-indigo-900 uppercase tracking-wider flex items-center gap-1.5">
+              {/* BRAND COLOR UPDATE: changed bg-indigo-50/50 border-indigo-100/80 text-indigo-900 text-indigo-950/70 to emerald color variants */}
+              <div className="bg-emerald-50/40 rounded-2xl border border-emerald-100/80 p-6 space-y-2">
+                <h4 className="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
                   <span>📋</span> {translate("contact.requirements_title")}
                 </h4>
-                <p className="text-xs font-medium text-indigo-950/70 leading-relaxed">
+                <p className="text-xs font-medium text-emerald-950/70 leading-relaxed">
                   {translate("contact.requirements_desc")}
                 </p>
               </div>

@@ -39,10 +39,11 @@ export default function Feedback() {
     window.location.href = "/";
   };
 
+  // BRAND COLOR UPDATE: changed border-indigo-600 bg-indigo-50/40 text-indigo-700 to brand emerald green variants
   const chipClass = (value) =>
     `border p-3 rounded-xl text-center cursor-pointer block group transition-all relative ${
       selectedChip === value
-        ? "border-indigo-600 bg-indigo-50/40 text-indigo-700"
+        ? "border-emerald-600 bg-emerald-50/40 text-emerald-800"
         : "border-slate-200 bg-slate-50/30 hover:bg-slate-50 text-slate-600"
     }`;
 
@@ -67,12 +68,14 @@ export default function Feedback() {
       <main className="flex-grow w-full m-0 pt-12 pb-24 px-6 sm:px-12 lg:px-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100 uppercase tracking-wide">
+            {/* BRAND COLOR UPDATE: changed bg-indigo-50 text-indigo-600 border-indigo-100 to emerald variants */}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 uppercase tracking-wide">
               {translate("feedback.page_badge")}
             </span>
             <h1 className="text-3xl font-black text-slate-900 tracking-tight">
               {translate("feedback.page_title_part1")}{" "}
-              <span className="text-indigo-600">
+              {/* BRAND COLOR UPDATE: changed text-indigo-600 to text-emerald-700 */}
+              <span className="text-emerald-700">
                 {translate("feedback.page_title_part2")}
               </span>
             </h1>
@@ -116,6 +119,7 @@ export default function Feedback() {
                   >
                     {translate("feedback.label_name")}
                   </label>
+                  {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                   <input
                     type="text"
                     id="student_name"
@@ -123,7 +127,7 @@ export default function Feedback() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Amara Perera"
-                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:bg-white transition-all"
+                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 text-sm focus:outline-none focus:border-emerald-600 focus:bg-white transition-all"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -195,6 +199,7 @@ export default function Feedback() {
                 >
                   {translate("feedback.label_comments")}
                 </label>
+                {/* BRAND COLOR UPDATE: changed focus:border-indigo-500 to focus:border-emerald-600 */}
                 <textarea
                   id="feedback_comments"
                   required
@@ -202,13 +207,14 @@ export default function Feedback() {
                   value={comments}
                   onChange={(e) => setComments(e.target.value)}
                   placeholder="..."
-                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:bg-white resize-none transition-all"
+                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50/50 border border-slate-200 text-sm focus:outline-none focus:border-emerald-600 focus:bg-white resize-none transition-all"
                 ></textarea>
               </div>
 
+              {/* BRAND COLOR UPDATE: changed bg-indigo-600 hover:bg-indigo-700 to brand emerald greens */}
               <button
                 type="submit"
-                className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-sm transition-all active:scale-[0.99]"
+                className="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-emerald-700/10 active:scale-[0.99]"
               >
                 {translate("feedback.btn_submit")}
               </button>

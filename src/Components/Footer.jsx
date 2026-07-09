@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { t } from "../translations/index";
+import { t } from "../translations/index"; // Direct path mapping matching your operational routing template
 import ThisaraLogo from "../assets/ThisaraLogo.png"; // Imported your logo image
 
 export default function Footer() {
@@ -36,7 +36,8 @@ export default function Footer() {
                 <h5 className="text-sm font-bold text-slate-900 notranslate">
                   Sarah Wickrema
                 </h5>
-                <p className="text-xs text-indigo-600 font-semibold">
+                {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+                <p className="text-xs text-emerald-700 font-semibold">
                   {translate("footer.role_sarah")}
                 </p>
               </div>
@@ -52,7 +53,8 @@ export default function Footer() {
                 <h5 className="text-sm font-bold text-slate-900 notranslate">
                   David Perera
                 </h5>
-                <p className="text-xs text-indigo-600 font-semibold">
+                {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+                <p className="text-xs text-emerald-700 font-semibold">
                   {translate("footer.role_david")}
                 </p>
               </div>
@@ -68,7 +70,8 @@ export default function Footer() {
                 <h5 className="text-sm font-bold text-slate-900 notranslate">
                   Jude Silva
                 </h5>
-                <p className="text-xs text-indigo-600 font-semibold">
+                {/* BRAND COLOR UPDATE: text-indigo-600 changed to text-emerald-700 */}
+                <p className="text-xs text-emerald-700 font-semibold">
                   {translate("footer.role_jude")}
                 </p>
               </div>
@@ -78,10 +81,9 @@ export default function Footer() {
 
         {/* Section: Main Directory Links */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-100 items-start">
-          {/* Branding Column - Bumped up to md:col-span-6 to allocate spacing for the bigger logo */}
+          {/* Branding Column */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-3">
-              {/* Enlarged logo image wrapper to match the header design */}
               <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-xl">
                 <img
                   src={ThisaraLogo}
@@ -98,7 +100,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact Information Column - Adjusted column allocation to md:col-span-3 */}
+          {/* Contact Information Column */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
               {translate("footer.connect_heading")}
@@ -118,8 +120,9 @@ export default function Footer() {
                 </span>
               </a>
 
+              {/* BRAND COLOR UPDATE: bg-indigo-50 text-indigo-600 changed to bg-emerald-50 text-emerald-700 */}
               <div className="flex items-center gap-2.5 text-xs font-semibold text-slate-600">
-                <span className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm">
+                <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-sm">
                   📞
                 </span>
                 <span className="notranslate">Hotline: 077-2339227</span>
@@ -136,7 +139,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Channels Column - Adjusted column allocation to md:col-span-3 */}
+          {/* Social Channels Column */}
           <div className="md:col-span-3 space-y-4 md:text-right">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
               {translate("footer.social_heading")}
@@ -145,12 +148,13 @@ export default function Footer() {
               {translate("footer.social_desc")}
             </p>
 
+            {/* BRAND COLOR UPDATE: hover:bg-indigo-50 hover:text-indigo-600 changed to hover:bg-emerald-50 hover:text-emerald-700 */}
             <div className="flex items-center gap-2 md:justify-end pt-1">
               <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-200/60 flex items-center justify-center text-slate-600 hover:text-indigo-600 transition-all transform hover:-translate-y-0.5 shadow-sm"
+                className="w-9 h-9 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200/60 flex items-center justify-center text-slate-600 hover:text-emerald-700 transition-all transform hover:-translate-y-0.5 shadow-sm"
                 title="Like us on Facebook"
               >
                 <span className="text-sm font-bold">📘</span>

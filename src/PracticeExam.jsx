@@ -80,19 +80,22 @@ export default function PracticeExam() {
             /* Start Splash Screen */
             <div className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-lg space-y-8 max-w-2xl mx-auto">
               <div className="text-center space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100 uppercase tracking-wide">
+                {/* BRAND COLOR UPDATE: changed bg-indigo-50 text-indigo-600 border-indigo-100 to brand emerald greens */}
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 uppercase tracking-wide">
                   {translate("exam.page_badge")}
                 </span>
                 <h1 className="text-3xl font-black text-slate-900 tracking-tight">
                   {translate("exam.page_title_part1")}{" "}
-                  <span className="text-indigo-600">
+                  {/* BRAND COLOR UPDATE: changed text-indigo-600 to brand emerald green */}
+                  <span className="text-emerald-700">
                     {translate("exam.page_title_part2")}
                   </span>
                 </h1>
               </div>
+              {/* BRAND COLOR UPDATE: changed bg-indigo-600 hover:bg-indigo-700 to brand emerald greens */}
               <button
                 onClick={() => setIsExamStarted(true)}
-                className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg text-base"
+                className="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl shadow-lg shadow-emerald-700/10 text-base transition-all duration-150 transform active:scale-[0.99]"
               >
                 {translate("exam.btn_start")}
               </button>
@@ -106,8 +109,9 @@ export default function PracticeExam() {
                     {translate("exam.label_progress")}
                   </span>
                   <div className="w-32 bg-slate-100 h-2 rounded-full overflow-hidden border">
+                    {/* BRAND COLOR UPDATE: changed bg-indigo-600 to bg-emerald-700 */}
                     <div
-                      className="bg-indigo-600 h-full transition-all duration-300"
+                      className="bg-emerald-700 h-full transition-all duration-300"
                       style={{
                         width: currentQuestionIndex === 1 ? "5%" : "40%",
                       }}
@@ -133,7 +137,8 @@ export default function PracticeExam() {
 
               <div className="bg-white p-6 md:p-10 rounded-3xl border border-slate-200/80 shadow-md space-y-8">
                 <div className="space-y-3">
-                  <span className="text-xs font-extrabold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md uppercase">
+                  {/* BRAND COLOR UPDATE: changed text-indigo-600 bg-indigo-50 to brand emerald green variants */}
+                  <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md uppercase">
                     {translate("exam.label_question")} 0{currentQuestionIndex}
                   </span>
                   <h2 className="text-xl font-black text-slate-900">
@@ -143,20 +148,22 @@ export default function PracticeExam() {
 
                 <div className="space-y-3">
                   <label className="flex items-center gap-4 p-4 rounded-2xl border border-slate-200/60 hover:bg-slate-50 cursor-pointer group">
+                    {/* BRAND COLOR UPDATE: changed text-indigo-600 to accent-emerald-700 */}
                     <input
                       type="radio"
                       name="mcq_option"
-                      className="w-4 h-4 text-indigo-600"
+                      className="w-4 h-4 accent-emerald-700"
                     />
                     <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
                       {translate(`exam.q${currentQuestionIndex}_opt1`)}
                     </span>
                   </label>
                   <label className="flex items-center gap-4 p-4 rounded-2xl border border-slate-200/60 hover:bg-slate-50 cursor-pointer group">
+                    {/* BRAND COLOR UPDATE: changed text-indigo-600 to accent-emerald-700 */}
                     <input
                       type="radio"
                       name="mcq_option"
-                      className="w-4 h-4 text-indigo-600"
+                      className="w-4 h-4 accent-emerald-700"
                     />
                     <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
                       {translate(`exam.q${currentQuestionIndex}_opt2`)}
@@ -171,9 +178,10 @@ export default function PracticeExam() {
                   >
                     {translate("exam.btn_prev")}
                   </button>
+                  {/* BRAND COLOR UPDATE: changed bg-indigo-600 hover:bg-indigo-700 to brand emerald greens */}
                   <button
                     onClick={simulateNext}
-                    className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition-all active:scale-95"
+                    className="px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md shadow-emerald-700/5 transition-all active:scale-95"
                   >
                     {translate("exam.btn_next")}
                   </button>
