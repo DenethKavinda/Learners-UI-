@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react";
-// Import the native path lookups helper
-import { t } from "../translations/index"; //
+import { t } from "../translations/index";
+import ThisaraLogo from "../assets/ThisaraLogo.png"; // Imported your logo image
 
 export default function Footer() {
-  // Determine initial language from local storage fallback to English
   const [currentLang, setCurrentLang] = useState(() => {
-    return localStorage.getItem("app_lang") || "en"; //
+    return localStorage.getItem("app_lang") || "en";
   });
 
-  // Dynamic clean shortcut translation handler
-  const translate = (path) => t(path, currentLang); //
+  const translate = (path) => t(path, currentLang);
 
   useEffect(() => {
-    // Listen to storage changes to keep state synced cleanly across views
     const handleLangChange = () => {
-      setCurrentLang(localStorage.getItem("app_lang") || "en"); //
+      setCurrentLang(localStorage.getItem("app_lang") || "en");
     };
-    window.addEventListener("storage", handleLangChange); //
-    return () => window.removeEventListener("storage", handleLangChange); //
+    window.addEventListener("storage", handleLangChange);
+    return () => window.removeEventListener("storage", handleLangChange);
   }, []);
 
   return (
@@ -81,15 +78,18 @@ export default function Footer() {
 
         {/* Section: Main Directory Links */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-100 items-start">
-          {/* Branding Column */}
-          <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
-                <span className="text-white font-black text-base tracking-wider">
-                  L
-                </span>
+          {/* Branding Column - Bumped up to md:col-span-6 to allocate spacing for the bigger logo */}
+          <div className="md:col-span-6 space-y-4">
+            <div className="flex items-center gap-3">
+              {/* Enlarged logo image wrapper to match the header design */}
+              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-xl">
+                <img
+                  src={ThisaraLogo}
+                  alt="Thisara Driving School Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-lg font-extrabold text-slate-900 tracking-tight notranslate">
+              <span className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight notranslate">
                 THISARA DRIVING SCHOOL
               </span>
             </div>
@@ -98,8 +98,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact Information Column */}
-          <div className="md:col-span-4 space-y-4">
+          {/* Contact Information Column - Adjusted column allocation to md:col-span-3 */}
+          <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
               {translate("footer.connect_heading")}
             </h4>
@@ -113,8 +113,8 @@ export default function Footer() {
                 <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm group-hover:bg-emerald-600 group-hover:text-white transition-all">
                   💬
                 </span>
-                <span className="notranslate">
-                  Chat on WhatsApp (+94 77 233 9227)
+                <span className="notranslate text-[11px] sm:text-xs">
+                  WhatsApp (+94 77 233 9227)
                 </span>
               </a>
 
@@ -129,12 +129,14 @@ export default function Footer() {
                 <span className="w-7 h-7 rounded-lg bg-slate-50 text-slate-500 flex items-center justify-center text-sm">
                   ✉️
                 </span>
-                <span className="notranslate">thisaralearners@gmail.com</span>
+                <span className="notranslate truncate">
+                  thisaralearners@gmail.com
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Social Channels Column */}
+          {/* Social Channels Column - Adjusted column allocation to md:col-span-3 */}
           <div className="md:col-span-3 space-y-4 md:text-right">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
               {translate("footer.social_heading")}

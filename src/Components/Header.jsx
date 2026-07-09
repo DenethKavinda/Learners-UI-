@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom"; // Added for routing structures
 import { t } from "../translations/index"; // Matches translation lookup paths
+import ThisaraLogo from "../assets/ThisaraLogo.png"; // Imported your new logo image
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,20 +45,25 @@ export default function Header() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-sm w-full">
+      {/* Changed background from bg-white/80 backdrop-blur-md to a solid solid bg-white */}
+      <nav className="fixed top-0 left-0 z-50 bg-white border-b border-slate-200/60 shadow-sm w-full">
         {/* Full-width container lining up exactly with pages */}
         <div className="w-full mx-auto px-4 sm:px-12 lg:px-24">
-          <div className="flex justify-between h-20 items-center w-full relative">
+          {/* Increased container height to h-24 on mobile and md:h-28 on desktop to fit the larger logo nicely */}
+          <div className="flex justify-between h-24 md:h-28 items-center w-full relative">
             {/* Logo linked to home natively */}
             <Link
               to="/"
               onClick={handleNavigationClick}
-              className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 transform transition-all duration-150 active:scale-95 cursor-pointer max-w-[70%] sm:max-w-none"
+              className="flex-shrink-0 flex items-center gap-2 sm:gap-4 transform transition-all duration-150 active:scale-95 cursor-pointer max-w-[80%] sm:max-w-none"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-md shadow-indigo-600/10 flex-shrink-0">
-                <span className="text-white font-black text-lg sm:text-xl tracking-wider">
-                  L
-                </span>
+              {/* Maximized logo image dimensions */}
+              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-xl">
+                <img
+                  src={ThisaraLogo}
+                  alt="Thisara Driving School Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xs xs:text-sm sm:text-xl font-extrabold text-slate-900 tracking-tight notranslate truncate sm:whitespace-normal">
                 THISARA DRIVING SCHOOL
@@ -199,7 +205,8 @@ export default function Header() {
 
         {/* Mobile Menu Content Panel Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 w-full border-t border-slate-100 bg-white py-4 px-6 space-y-2 shadow-xl z-40 animate-fadeIn">
+          /* Shifted mobile panel context down slightly to top-24 to handle enlarged navbar frame */
+          <div className="md:hidden absolute top-24 left-0 w-full border-t border-slate-100 bg-white py-4 px-6 space-y-2 shadow-xl z-40 animate-fadeIn">
             <Link
               to="/"
               onClick={handleNavigationClick}
@@ -239,8 +246,8 @@ export default function Header() {
         )}
       </nav>
 
-      {/* Spacer to push page contents down since fixed header floats above layout context */}
-      <div className="h-20 w-full flex-shrink-0"></div>
+      {/* Adjusted structural height to avoid layout shifting on lower section page text initialization */}
+      <div className="h-24 md:h-28 w-full flex-shrink-0"></div>
     </>
   );
 }
