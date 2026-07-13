@@ -10,87 +10,178 @@ import slipImg from "./assets/slip.png";
 import img2 from "./assets/2.png";
 import crossImg from "./assets/Cross.png";
 
-// Questions Array with correct answers mapping
-const QUESTIONS_DATA = [
-  {
-    id: 1,
-    image: closeImg,
-    text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
-    options: [
-      "A) ඉදිරියෙන් මාර්ගය වසා ඇත.",
-      "B) දුම්රිය හරස් මාර්ගය ඉදිරියෙනි.",
-      "C) ආරක්ෂා කර නොමැති දුම්රිය හරස් මාර්ගය.",
-      "D) ආරක්ෂා කර නොමැති දුම්රිය හරස් මාර්ගය ඉදිරියෙනි.",
-    ],
-    correctAnswer: 0, // A
-  },
-  {
-    id: 2,
-    image: slipImg,
-    text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
-    options: [
-      "A) ලිස්සන සුළු මාර්ගය ඉදිරියෙනි",
-      "B) වංගු සහිත මාර්ගය ඉදිරියෙනි",
-      "C) අනතුරුදායක මංසන්ධිය ඉදිරියෙනි",
-      "D) ඉදිරියෙන් මාර්ගය පටුය",
-    ],
-    correctAnswer: 0, // A
-  },
-  {
-    id: 3,
-    image: img2,
-    text: "පහත මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
-    options: [
-      "A) ඔත්තේ දිනවල වාහන නැවැත්වීම තහනම්.",
-      "B) ඉරට්ටේ දිනවල වාහන නැවැත්වීම තහනම්.",
-      "C) ඔත්තේ දිනවල වාහන ඇතුල්වීම තහනම්.",
-      "D) ඉරට්ටේ දිනවල වාහන ඇතුල්වීම තහනම්.",
-    ],
-    correctAnswer: 1, // B
-  },
-  {
-    id: 4,
-    image: crossImg,
-    text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
-    options: [
-      "A) පදිකයින් සදහා ඉඩ දෙන්න.",
-      "B) පදිකයින් මාරුවන ස්ථානය.",
-      "C) පදික මාරුව ඉදිරියෙන්.",
-      "D) පදිකයින් සදහා වෙන් කළ මාර්ගයේ ආරම්භය.",
-    ],
-    correctAnswer: 1, // B
-  },
-  {
-    id: 5,
-    image: null,
-    text: "වාහනයක අවධානම හැගවීමේ ලාම්පු (Hazard Lamp) පාවිච්චි කිරීම කළ යුත්තේ",
-    options: [
-      "A) වාහනයක් හදිසි තත්ත්වයක් නිසා ධාවනය කරන බව දැක්වීම සදහාය.",
-      "B) හන්දියකදී වාහනයක් කෙලින්ම ධාවනය කිරීමට අදහස් කරන අවස්ථාවේදීය.",
-      "C) ප්‍රමුඛතාවය ලබා ගැනීමටය.",
-      "D) වාහනයක් අබල තත්ත්වයට පත්ව නවතා තිබියදී පමණි.",
-    ],
-    correctAnswer: 3, // D (වාහනයක් අබල තත්ත්වයට පත්ව නවතා තිබියදී පමණි)
-  },
-  {
-    id: 6,
-    image: null,
-    text: "වෙනත් වාහනයක් විසින් ඔබගේ වාහනය පසුකර යන අවස්ථාවකදී",
-    options: [
-      "A) ඔබගේ වාහනය අඩු ගියරයකට යොදා නතර කිරීමට සූදානම් විය යුතුය",
-      "B) ඔබගේ වාහනය වේගය වැඩි නොකර පසුකරන්නාට ඔබගේ වාහනය පසුකර යාමට ඉඩදිය යුතුය.",
-      "C) ඔබ පසුකර යාමට ඉඩදීමට කැමැත්තක් නොදක්වන්නේනම් ඔබට වාහනයේ වේගය වැඩි කළ හැක.",
-      "D) ඔබ පසුකර යාමට ඉඩදීමට කැමැත්තක් නොදක්වන්නේ නම් ඔබගේ වාහනයේ දකුණු පස සංඥා දැල්විය යුතුය",
-    ],
-    correctAnswer: 1, // B (වේගය වැඩි නොකර පසුකරන්නාට ඉඩදිය යුතුය)
-  },
-];
+// Questions Papers Data Object
+const EXAM_PAPERS = {
+  paper1: [
+    {
+      id: 1,
+      image: closeImg,
+      text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
+      options: [
+        "A) ඉදිරියෙන් මාර්ගය වසා ඇත.",
+        "B) දුම්රිය හරස් මාර්ගය ඉදිරියෙනි.",
+        "C) ආරක්ෂා කර නොමැති දුම්රිය හරස් මාර්ගය.",
+        "D) ආරක්ෂා කර නොමැති දුම්රිය හරස් මාර්ගය ඉදිරියෙනි.",
+      ],
+      correctAnswer: 0, // A
+    },
+    {
+      id: 2,
+      image: slipImg,
+      text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
+      options: [
+        "A) ලිස්සන සුළු මාර්ගය ඉදිරියෙනි",
+        "B) වංගු සහිත මාර්ගය ඉදිරියෙනි",
+        "C) අනතුරුදායක මංසන්ධිය ඉදිරියෙනි",
+        "D) ඉදිරියෙන් මාර්ගය පටුය",
+      ],
+      correctAnswer: 0, // A
+    },
+    {
+      id: 3,
+      image: img2,
+      text: "පහත මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
+      options: [
+        "A) ඔත්තේ දිනවල වාහන නැවැත්වීම තහනම්.",
+        "B) ඉරට්ටේ දිනවල වාහන නැවැත්වීම තහනම්.",
+        "C) ඔත්තේ දිනවල වාහන ඇතුල්වීම තහනම්.",
+        "D) ඉරට්ටේ දිනවල වාහන ඇතුල්වීම තහනම්.",
+      ],
+      correctAnswer: 1, // B
+    },
+    {
+      id: 4,
+      image: crossImg,
+      text: "මාර්ග සංඥාවෙන් දැක්වෙන්නේ",
+      options: [
+        "A) පදිකයින් සදහා ඉඩ දෙන්න.",
+        "B) පදිකයින් මාරුවන ස්ථානය.",
+        "C) පදික මාරුව ඉදිරියෙන්.",
+        "D) පදිකයින් සදහා වෙන් කළ මාර්ගයේ ආරම්භය.",
+      ],
+      correctAnswer: 1, // B
+    },
+    {
+      id: 5,
+      image: null,
+      text: "වාහනයක අවධානම හැගවීමේ ලාම්පු (Hazard Lamp) පාවිච්චි කිරීම කළ යුත්තේ",
+      options: [
+        "A) වාහනයක් හදිසි තත්ත්වයක් නිසා ධාවනය කරන බව දැක්වීම සදහාය.",
+        "B) හන්දියකදී වාහනයක් කෙලින්ම ධාවනය කිරීමට අදහස් කරන අවස්ථාවේදීය.",
+        "C) ප්‍රමුඛතාවය ලබා ගැනීමටය.",
+        "D) වාහනයක් අබල තත්ත්වයට පත්ව නවතා තිබියදී පමණි.",
+      ],
+      correctAnswer: 3, // D (වාහනයක් අබල තත්ත්වයට පත්ව නවතා තිබියදී පමණි)
+    },
+    {
+      id: 6,
+      image: null,
+      text: "වෙනත් වාහනයක් විසින් ඔබගේ වාහනය පසුකර යන අවස්ථාවකදී",
+      options: [
+        "A) ඔබගේ වාහනය අඩු ගියරයකට යොදා නතර කිරීමට සූදානම් විය යුතුය",
+        "B) ඔබගේ වාහනය වේගය වැඩි නොකර පසුකරන්නාට ඔබගේ වාහනය පසුකර යාමට ඉඩදිය යුතුය.",
+        "C) ඔබ පසුකර යාමට ඉඩදීමට කැමැත්තක් නොදක්වන්නේනම් ඔබට වාහනයේ වේගය වැඩි කළ හැක.",
+        "D) ඔබ පසුකර යාමට ඉඩදීමට කැමැත්තක් නොදක්වන්නේ නම් ඔබගේ වාහනයේ දකුණු පස සංඥා දැල්විය යුතුය",
+      ],
+      correctAnswer: 1, // B (වේගය වැඩි නොකර පසුකරන්නාට ඉඩදිය යුතුය)
+    },
+  ],
+  paper2: [
+    {
+      id: 1,
+      image: null, // No image as requested
+      text: "රාත්‍රී කාලයේදී පදිකයෙකු ලෙස මාර්ගයේ ගමන් කිරීමේදී වඩාත් ආරක්ෂිත ක්‍රමය කුමක්ද?",
+      options: [
+        "A) මාර්ගයේ මැදින් ගමන් කිරීම.",
+        "B) ළා පැහැති හෝ ආලෝකය පරාවර්තනය වන ඇඳුම් ඇඳීම.",
+        "C) කළු පැහැති ඇඳුම් පමණක් ඇඳීම.",
+        "D) වේගයෙන් දිව යාම.",
+      ],
+      correctAnswer: 1,
+    },
+    {
+      id: 2,
+      image: null,
+      text: "ධාවනය වෙමින් පවතින වාහනයක තිරිංග (Brakes) ක්‍රියා විරහිත වුවහොත් මුලින්ම කළ යුත්තේ කුමක්ද?",
+      options: [
+        "A) වාහනයෙන් බිමට පැනීම.",
+        "B) එන්ජිම ක්‍රියා විරහිත කර යතුර ගැලවීම.",
+        "C) ක්‍රමයෙන් අඩු ගියර වලට මාරු කරමින් වේගය පාලනය කිරීම සහ හදිසි තිරිංග (Handbrake) භාවිත කිරීම.",
+        "D) ඉදිරියෙන් ඇති වාහනයක ගැටීමට හැරීම.",
+      ],
+      correctAnswer: 2,
+    },
+    {
+      id: 3,
+      image: null,
+      text: "පසුපසින් පැමිණෙන ගිලන් රථයකට ඔබ ඉඩ ලබා දිය යුත්තේ කෙසේද?",
+      options: [
+        "A) වාහනයේ වේගය තවත් වැඩි කිරීමෙන්.",
+        "B) වහාම වාහනය පාර මැද නතර කිරීමෙන්.",
+        "C) වම් පසට සංඥා දමා ආරක්ෂිතව වම් පසින් ඉඩ ලබා දීමෙන්.",
+        "D) කිසිදු වෙනසක් නොකර ධාවනය කිරීමෙන්.",
+      ],
+      correctAnswer: 2,
+    },
+    {
+      id: 4,
+      image: null,
+      text: "රවුම් මංසන්ධියකට (Roundabout) ඇතුළු වීමේදී ප්‍රමුඛතාවය දිය යුත්තේ කාටද?",
+      options: [
+        "A) දකුණු පසින් දැනටමත් රවුම් මංසන්ධිය තුළ ධාවනය වන වාහන වලට.",
+        "B) වම් පසින් පැමිණෙන වාහන වලට.",
+        "C) විශාල වාහන වලට පමණි.",
+        "D) තමාට පසුපසින් පැමිණෙන වාහන වලට.",
+      ],
+      correctAnswer: 0,
+    },
+  ],
+  paper3: [
+    {
+      id: 1,
+      image: null, // No image as requested
+      text: "රථවාහන පදවන්නෙකු සන්තකයේ තිබිය යුතු අනිවාර්ය ලියකියවිලි මොනවාද?",
+      options: [
+        "A) උප්පැන්න සහතිකය පමණි.",
+        "B) වලංගු රියදුරු බලපත්‍රය, ආදායම් බලපත්‍රය සහ රක්ෂණ සහතිකය.",
+        "C) වාහන මිලදී ගත් රිසිට්පත පමණි.",
+        "D) ජාතික හැඳුනුම්පත පමණි.",
+      ],
+      correctAnswer: 1,
+    },
+    {
+      id: 2,
+      image: null,
+      text: "ධාවන පථ දෙකක් ඇති මාර්ගයක සාමාන්‍යයෙන් ධාවනය කල යුත්තේ කුමන පථයේද?",
+      options: [
+        "A) දකුණු පස පථයේ.",
+        "B) වම් පස පථයේ.",
+        "C) මාර්ගය මැද සුදු ඉර උඩින්.",
+        "D) තමාට කැමති ඕනෑම පථයක.",
+      ],
+      correctAnswer: 1,
+    },
+    {
+      id: 3,
+      image: null,
+      text: "මාර්ගයක ඇඳ ඇති තනි සුදු ඉර කැපීම හෝ එය මතින් වාහන පසුකර යාම (Overtake):",
+      options: [
+        "A) සම්පූර්ණයෙන්ම තහනම් වේ.",
+        "B) ඕනෑම අවස්ථාවක කල හැක.",
+        "C) රාත්‍රී කාලයේදී පමණක් කල හැක.",
+        "D) ඉඩ ඇති අවස්ථාවල පමණක් කල හැක.",
+      ],
+      correctAnswer: 0,
+    },
+  ],
+};
 
 export default function PracticeExam() {
   const [currentLang, setCurrentLang] = useState(() => {
     return localStorage.getItem("app_lang") || "en";
   });
 
+  const [selectedPaper, setSelectedPaper] = useState("paper1");
   const [isExamStarted, setIsExamStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -99,6 +190,9 @@ export default function PracticeExam() {
   const [score, setScore] = useState(0);
 
   const translate = (path) => t(path, currentLang);
+
+  // Dynamic calculation based on selected paper
+  const currentQuestionsData = EXAM_PAPERS[selectedPaper];
 
   useEffect(() => {
     const handleLangChange = () => {
@@ -124,7 +218,7 @@ export default function PracticeExam() {
       clearInterval(timerInterval);
       window.removeEventListener("storage", handleLangChange);
     };
-  }, [isExamStarted, isExamFinished, currentLang]);
+  }, [isExamStarted, isExamFinished, currentLang, selectedPaper]);
 
   const formatTime = () => {
     const minutes = Math.floor(timeLeft / 60);
@@ -134,7 +228,7 @@ export default function PracticeExam() {
 
   const calculateScore = () => {
     let currentScore = 0;
-    QUESTIONS_DATA.forEach((question, index) => {
+    currentQuestionsData.forEach((question, index) => {
       if (selectedAnswers[index] === question.correctAnswer) {
         currentScore += 1;
       }
@@ -144,7 +238,7 @@ export default function PracticeExam() {
   };
 
   const handleNext = () => {
-    if (currentQuestionIndex < QUESTIONS_DATA.length - 1) {
+    if (currentQuestionIndex < currentQuestionsData.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
     } else {
       calculateScore();
@@ -173,8 +267,8 @@ export default function PracticeExam() {
     setScore(0);
   };
 
-  const currentQuestion = QUESTIONS_DATA[currentQuestionIndex];
-  const totalQuestions = QUESTIONS_DATA.length;
+  const currentQuestion = currentQuestionsData[currentQuestionIndex];
+  const totalQuestions = currentQuestionsData.length;
   const progressPercentage =
     ((currentQuestionIndex + 1) / totalQuestions) * 100;
 
@@ -213,7 +307,7 @@ export default function PracticeExam() {
       <main className="flex-grow w-full m-0 pt-12 pb-24 px-6 sm:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto">
           {!isExamStarted ? (
-            /* Start Splash Screen */
+            /* Start Splash Screen with Paper Selector */
             <div className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-lg space-y-8 max-w-2xl mx-auto">
               <div className="text-center space-y-3">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 uppercase tracking-wide">
@@ -225,7 +319,48 @@ export default function PracticeExam() {
                     {translate("exam.page_title_part2")}
                   </span>
                 </h1>
+                <p className="text-sm text-slate-500 font-medium pt-2">
+                  කරුණාකර ප්‍රශ්න පත්‍රයක් තෝරන්න (Select a Question Paper):
+                </p>
               </div>
+
+              {/* Exam Paper Selection Tabs */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-1.5 bg-slate-100 rounded-2xl">
+                <button
+                  type="button"
+                  onClick={() => setSelectedPaper("paper1")}
+                  className={`py-3 px-4 rounded-xl font-bold text-sm transition-all ${
+                    selectedPaper === "paper1"
+                      ? "bg-white text-emerald-800 shadow-sm border border-slate-200/50"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  Paper 1
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPaper("paper2")}
+                  className={`py-3 px-4 rounded-xl font-bold text-sm transition-all ${
+                    selectedPaper === "paper2"
+                      ? "bg-white text-emerald-800 shadow-sm border border-slate-200/50"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  Paper 2
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPaper("paper3")}
+                  className={`py-3 px-4 rounded-xl font-bold text-sm transition-all ${
+                    selectedPaper === "paper3"
+                      ? "bg-white text-emerald-800 shadow-sm border border-slate-200/50"
+                      : "text-slate-600 hover:text-slate-900"
+                  }`}
+                >
+                  Paper 3
+                </button>
+              </div>
+
               <button
                 onClick={() => setIsExamStarted(true)}
                 className="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl shadow-lg shadow-emerald-700/10 text-base transition-all duration-150 transform active:scale-[0.99]"
@@ -267,10 +402,19 @@ export default function PracticeExam() {
 
               <div className="bg-white p-6 md:p-10 rounded-3xl border border-slate-200/80 shadow-md space-y-8">
                 <div className="space-y-4">
-                  <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md uppercase">
-                    {translate("exam.label_question")} 0
-                    {currentQuestionIndex + 1}
-                  </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md uppercase">
+                      {translate("exam.label_question")} 0
+                      {currentQuestionIndex + 1}
+                    </span>
+                    <span className="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
+                      {selectedPaper === "paper1"
+                        ? "Paper 1"
+                        : selectedPaper === "paper2"
+                          ? "Paper 2"
+                          : "Paper 3"}
+                    </span>
+                  </div>
                   <h2 className="text-xl font-black text-slate-900 leading-relaxed">
                     {currentQuestion.text}
                   </h2>
