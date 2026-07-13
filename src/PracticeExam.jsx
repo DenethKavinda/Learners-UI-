@@ -89,7 +89,7 @@ const EXAM_PAPERS = {
   paper2: [
     {
       id: 1,
-      image: null, // No image as requested
+      image: null,
       text: "රාත්‍රී කාලයේදී පදිකයෙකු ලෙස මාර්ගයේ ගමන් කිරීමේදී වඩාත් ආරක්ෂිත ක්‍රමය කුමක්ද?",
       options: [
         "A) මාර්ගයේ මැදින් ගමන් කිරීම.",
@@ -139,7 +139,7 @@ const EXAM_PAPERS = {
   paper3: [
     {
       id: 1,
-      image: null, // No image as requested
+      image: null,
       text: "රථවාහන පදවන්නෙකු සන්තකයේ තිබිය යුතු අනිවාර්ය ලියකියවිලි මොනවාද?",
       options: [
         "A) උප්පැන්න සහතිකය පමණි.",
@@ -187,11 +187,12 @@ export default function PracticeExam() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [isExamFinished, setIsExamFinished] = useState(false);
+  const [showScoreModal, setShowScoreModal] = useState(false);
+  const [isReviewMode, setIsReviewMode] = useState(false);
   const [score, setScore] = useState(0);
 
   const translate = (path) => t(path, currentLang);
 
-  // Dynamic calculation based on selected paper
   const currentQuestionsData = EXAM_PAPERS[selectedPaper];
 
   useEffect(() => {
@@ -235,13 +236,16 @@ export default function PracticeExam() {
     });
     setScore(currentScore);
     setIsExamFinished(true);
+    setShowScoreModal(true);
   };
 
   const handleNext = () => {
     if (currentQuestionIndex < currentQuestionsData.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
     } else {
-      calculateScore();
+      if (!isReviewMode) {
+        calculateScore();
+      }
     }
   };
 
@@ -252,10 +256,17 @@ export default function PracticeExam() {
   };
 
   const handleOptionChange = (optionIndex) => {
+    if (isReviewMode) return; // Prevent changes during review
     setSelectedAnswers({
       ...selectedAnswers,
       [currentQuestionIndex]: optionIndex,
     });
+  };
+
+  const startReview = () => {
+    setShowScoreModal(false);
+    setIsReviewMode(true);
+    setCurrentQuestionIndex(0);
   };
 
   const restartExam = () => {
@@ -263,6 +274,8 @@ export default function PracticeExam() {
     setCurrentQuestionIndex(0);
     setTimeLeft(25 * 60);
     setIsExamFinished(false);
+    setShowScoreModal(false);
+    setIsReviewMode(false);
     setIsExamStarted(false);
     setScore(0);
   };
@@ -307,7 +320,7 @@ export default function PracticeExam() {
       <main className="flex-grow w-full m-0 pt-12 pb-24 px-6 sm:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto">
           {!isExamStarted ? (
-            /* Start Splash Screen with Paper Selector */
+            /* Start Splash Screen */
             <div className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-lg space-y-8 max-w-2xl mx-auto">
               <div className="text-center space-y-3">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 uppercase tracking-wide">
@@ -388,16 +401,22 @@ export default function PracticeExam() {
                   </span>
                 </div>
 
-                <div
-                  className={`flex items-center gap-2 font-black px-4 py-2 rounded-xl text-sm transition-all ${
-                    timeLeft < 180 && !isExamFinished
-                      ? "bg-rose-600 text-white animate-pulse"
-                      : "bg-rose-50 border border-rose-100 text-rose-700"
-                  }`}
-                >
-                  <span>⏳</span>
-                  <span>{formatTime()}</span>
-                </div>
+                {isReviewMode ? (
+                  <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider">
+                    👁️ Review Mode
+                  </div>
+                ) : (
+                  <div
+                    className={`flex items-center gap-2 font-black px-4 py-2 rounded-xl text-sm transition-all ${
+                      timeLeft < 180
+                        ? "bg-rose-600 text-white animate-pulse"
+                        : "bg-rose-50 border border-rose-100 text-rose-700"
+                    }`}
+                  >
+                    <span>⏳</span>
+                    <span>{formatTime()}</span>
+                  </div>
+                )}
               </div>
 
               <div className="bg-white p-6 md:p-10 rounded-3xl border border-slate-200/80 shadow-md space-y-8">
@@ -431,27 +450,58 @@ export default function PracticeExam() {
                 </div>
 
                 <div className="space-y-3">
-                  {currentQuestion.options.map((option, idx) => (
-                    <label
-                      key={idx}
-                      className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer group transition-all ${
-                        selectedAnswers[currentQuestionIndex] === idx
-                          ? "border-emerald-600 bg-emerald-50/30"
-                          : "border-slate-200/60 hover:bg-slate-50"
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name={`mcq_option_${currentQuestionIndex}`}
-                        checked={selectedAnswers[currentQuestionIndex] === idx}
-                        onChange={() => handleOptionChange(idx)}
-                        className="w-4 h-4 accent-emerald-700"
-                      />
-                      <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
-                        {option}
-                      </span>
-                    </label>
-                  ))}
+                  {currentQuestion.options.map((option, idx) => {
+                    const isSelected =
+                      selectedAnswers[currentQuestionIndex] === idx;
+                    const isCorrect = currentQuestion.correctAnswer === idx;
+
+                    let optionStyles = "border-slate-200/60 hover:bg-slate-50";
+                    let badgeEl = null;
+
+                    if (isReviewMode) {
+                      if (isCorrect) {
+                        optionStyles =
+                          "border-emerald-600 bg-emerald-50/40 text-emerald-950 font-semibold";
+                        badgeEl = (
+                          <span className="text-emerald-700 font-bold ml-auto text-sm">
+                            ✓ නිවැරදි පිළිතුර (Correct)
+                          </span>
+                        );
+                      } else if (isSelected && !isCorrect) {
+                        optionStyles =
+                          "border-rose-500 bg-rose-50/40 text-rose-950 line-through";
+                        badgeEl = (
+                          <span className="text-rose-600 font-bold ml-auto text-sm">
+                            ✗ වැරදියි (Incorrect)
+                          </span>
+                        );
+                      }
+                    } else {
+                      if (isSelected) {
+                        optionStyles = "border-emerald-600 bg-emerald-50/30";
+                      }
+                    }
+
+                    return (
+                      <label
+                        key={idx}
+                        className={`flex items-center gap-4 p-4 rounded-2xl border cursor-pointer group transition-all ${optionStyles}`}
+                      >
+                        <input
+                          type="radio"
+                          name={`mcq_option_${currentQuestionIndex}`}
+                          checked={isSelected}
+                          disabled={isReviewMode}
+                          onChange={() => handleOptionChange(idx)}
+                          className="w-4 h-4 accent-emerald-700"
+                        />
+                        <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
+                          {option}
+                        </span>
+                        {badgeEl}
+                      </label>
+                    );
+                  })}
                 </div>
 
                 <div className="flex items-center justify-between pt-6 border-t border-slate-100">
@@ -466,14 +516,35 @@ export default function PracticeExam() {
                   >
                     {translate("exam.btn_prev")}
                   </button>
-                  <button
-                    onClick={handleNext}
-                    className="px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md shadow-emerald-700/5 transition-all active:scale-95"
-                  >
-                    {currentQuestionIndex === totalQuestions - 1
-                      ? "Finish"
-                      : translate("exam.btn_next")}
-                  </button>
+
+                  <div className="flex gap-2">
+                    {isReviewMode && (
+                      <button
+                        onClick={restartExam}
+                        className="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-bold text-sm bg-slate-50 hover:bg-slate-100 transition-all active:scale-95"
+                      >
+                        Exit Review
+                      </button>
+                    )}
+                    <button
+                      onClick={handleNext}
+                      disabled={
+                        isReviewMode &&
+                        currentQuestionIndex === totalQuestions - 1
+                      }
+                      className={`px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md shadow-emerald-700/5 transition-all active:scale-95 ${
+                        isReviewMode &&
+                        currentQuestionIndex === totalQuestions - 1
+                          ? "opacity-50 cursor-not-allowed"
+                          : ""
+                      }`}
+                    >
+                      {currentQuestionIndex === totalQuestions - 1 &&
+                      !isReviewMode
+                        ? "Finish"
+                        : translate("exam.btn_next")}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -482,7 +553,7 @@ export default function PracticeExam() {
       </main>
 
       {/* Nicely Centered Score Pop-up Modal */}
-      {isExamFinished && (
+      {showScoreModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 animate-fade-in">
           <div className="bg-white rounded-3xl p-8 md:p-10 max-w-md w-full text-center shadow-2xl border border-slate-100 space-y-6 animate-scale-up">
             <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-4xl text-emerald-600 shadow-inner">
@@ -510,12 +581,20 @@ export default function PracticeExam() {
               </div>
             </div>
 
-            <button
-              onClick={restartExam}
-              className="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl shadow-lg shadow-emerald-700/10 text-sm transition-all transform active:scale-[0.98]"
-            >
-              නැවත උත්සාහ කරන්න
-            </button>
+            <div className="space-y-2">
+              <button
+                onClick={startReview}
+                className="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl shadow-lg shadow-emerald-700/10 text-sm transition-all transform active:scale-[0.98]"
+              >
+                පිළිතුරු පරීක්ෂා කරන්න (Review Answers)
+              </button>
+              <button
+                onClick={restartExam}
+                className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-all"
+              >
+                නැවත උත්සාහ කරන්න (Try Again)
+              </button>
+            </div>
           </div>
         </div>
       )}
